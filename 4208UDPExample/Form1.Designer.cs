@@ -58,8 +58,6 @@
             this.par2_label = new System.Windows.Forms.Label();
             this.par3_label = new System.Windows.Forms.Label();
             this.my_keepalive = new System.Windows.Forms.CheckBox();
-            this.my_scope = new System.Windows.Forms.CheckBox();
-            this.no_erase = new System.Windows.Forms.CheckBox();
             this.gap_count = new System.Windows.Forms.Label();
             this.packetsize = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -96,9 +94,9 @@
             // 
             // my_disconnect
             // 
-            this.my_disconnect.Location = new System.Drawing.Point(1182, 9);
+            this.my_disconnect.Location = new System.Drawing.Point(1289, 8);
             this.my_disconnect.Name = "my_disconnect";
-            this.my_disconnect.Size = new System.Drawing.Size(70, 48);
+            this.my_disconnect.Size = new System.Drawing.Size(93, 48);
             this.my_disconnect.TabIndex = 37;
             this.my_disconnect.Text = "Disconnect";
             this.my_disconnect.UseVisualStyleBackColor = true;
@@ -123,7 +121,7 @@
             // 
             this.sync_stop.Location = new System.Drawing.Point(1121, 8);
             this.sync_stop.Name = "sync_stop";
-            this.sync_stop.Size = new System.Drawing.Size(55, 49);
+            this.sync_stop.Size = new System.Drawing.Size(71, 49);
             this.sync_stop.TabIndex = 46;
             this.sync_stop.Text = "Stop";
             this.sync_stop.UseVisualStyleBackColor = true;
@@ -339,28 +337,6 @@
             this.my_keepalive.UseVisualStyleBackColor = true;
             this.my_keepalive.CheckedChanged += new System.EventHandler(this.my_keepalive_CheckedChanged);
             // 
-            // my_scope
-            // 
-            this.my_scope.AutoCheck = false;
-            this.my_scope.AutoSize = true;
-            this.my_scope.Location = new System.Drawing.Point(1274, 26);
-            this.my_scope.Name = "my_scope";
-            this.my_scope.Size = new System.Drawing.Size(59, 17);
-            this.my_scope.TabIndex = 78;
-            this.my_scope.Text = "Trigger";
-            this.my_scope.UseVisualStyleBackColor = true;
-            // 
-            // no_erase
-            // 
-            this.no_erase.AutoSize = true;
-            this.no_erase.Location = new System.Drawing.Point(1274, 7);
-            this.no_erase.Name = "no_erase";
-            this.no_erase.Size = new System.Drawing.Size(96, 17);
-            this.no_erase.TabIndex = 80;
-            this.no_erase.Text = "SumWaveform";
-            this.no_erase.UseVisualStyleBackColor = true;
-            this.no_erase.CheckedChanged += new System.EventHandler(this.no_erase_CheckedChanged);
-            // 
             // gap_count
             // 
             this.gap_count.AutoSize = true;
@@ -448,12 +424,12 @@
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(683, 16);
+            this.label3.Location = new System.Drawing.Point(683, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(86, 11);
             this.label3.TabIndex = 94;
             this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label11
             // 
@@ -508,9 +484,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.packetsize);
             this.Controls.Add(this.gap_count);
-            this.Controls.Add(this.no_erase);
             this.Controls.Add(this.axXChart1);
-            this.Controls.Add(this.my_scope);
             this.Controls.Add(this.my_keepalive);
             this.Controls.Add(this.par3_label);
             this.Controls.Add(this.par2_label);
@@ -581,9 +555,7 @@
         private System.Windows.Forms.Label par2_label;
         private System.Windows.Forms.Label par3_label;
         private System.Windows.Forms.CheckBox my_keepalive;
-        private System.Windows.Forms.CheckBox my_scope;
         private AxXCHARTLib.AxXChart axXChart1;
-        private System.Windows.Forms.CheckBox no_erase;
         private System.Windows.Forms.Label gap_count;
         private System.Windows.Forms.ComboBox packetsize;
         private System.Windows.Forms.Label label10;

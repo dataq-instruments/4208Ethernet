@@ -1004,29 +1004,7 @@ namespace UDPTestClient
 
         }
 
-        private void no_erase_CheckedChanged(object sender, EventArgs e)
-        {
-            if (no_erase.Checked)
-            {
-                axXChart1.SumWaveforms = true;
-                axXChart1.Persist = 0;
-                axXChart1.ScrollMode = false;
-            }
-            else
-            {
-                axXChart1.ScrollMode = true;
-            }
-        }
 
-        private void sync2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void non_sync_start_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void axXChart1_ChartChanged(object sender, AxXCHARTLib._DXChartEvents_ChartChangedEvent e)
         {
@@ -1071,55 +1049,6 @@ namespace UDPTestClient
             
             if (availablescan > 0)
             {
-                if (my_scope.Checked)
-                {
-                    takeindex = takeindex + availablescan;
-                    if (takeindex >= DEVICE_ADC_BUFFER_SIZE) takeindex = takeindex - DEVICE_ADC_BUFFER_SIZE;
-
-                    backstepindex = takeindex;
-
-                    Int16[,] ADCData = new Int16[gTotalDevice, axXChart1.Xmax + 1];
-
-                    /*Skip half the width of chart first*/
-                    backstepindex = backstepindex - axXChart1.Xmax / 2 - 1;
-                    if (backstepindex < 0) backstepindex = backstepindex + DEVICE_ADC_BUFFER_SIZE;
-
-                    /*Find the a high in first channel*/
-                    for (j = 0; j < DEVICE_ADC_BUFFER_SIZE; j++)
-                    {
-                        if (ADCDataBuffer[0, backstepindex] > 20) break;
-                        backstepindex--;
-                        if (backstepindex < 0) backstepindex = backstepindex + DEVICE_ADC_BUFFER_SIZE;
-                    }
-
-                    /*Find the low*/
-                    for (j = 0; j < DEVICE_ADC_BUFFER_SIZE; j++)
-                    {
-                        backstepindex--;
-                        if (backstepindex < 0) backstepindex = backstepindex + DEVICE_ADC_BUFFER_SIZE;
-                        if (ADCDataBuffer[0, backstepindex] < -20) break;
-                    }
-
-                    /*Skip second half the width of chart first*/
-                    backstepindex = backstepindex - axXChart1.Xmax / 2;
-                    if (backstepindex < 0) backstepindex = backstepindex + DEVICE_ADC_BUFFER_SIZE;
-
-                    for (j = 0; j < axXChart1.Xmax + 1; j++)
-                    {
-                        for (i = 0; i < gTotalDevice; i++)
-                        {
-                            ADCData[i, j] = ADCDataBuffer[i, backstepindex];
-                        }
-                        backstepindex++;
-                        if (backstepindex >= DEVICE_ADC_BUFFER_SIZE) backstepindex = 0;
-                    }
-
-
-                    axXChart1
-                        .Chart(ADCData);
-                }
-                else
-                {
                     Int16[,] ADCData = new Int16[gTotalDevice, availablescan];
                     for (j = 0; j < availablescan; j++)
                     {
@@ -1134,7 +1063,6 @@ namespace UDPTestClient
 
                     axXChart1
                         .Chart(ADCData);
-                }
             }
         }
 
