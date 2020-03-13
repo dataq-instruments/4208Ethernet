@@ -722,8 +722,15 @@ namespace UDPTestClient
         
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string text = listBox1.GetItemText(listBox1.SelectedItem);
-            sync1.Text = text.Substring(PayLoad.Text.LastIndexOf('.')+1, 3).Trim() ;
+            try
+            {
+                string text = listBox1.GetItemText(listBox1.SelectedItem);
+                sync1.Text = text.Substring(PayLoad.Text.LastIndexOf('.') + 1, 3).Trim();
+            }
+            catch
+            {
+
+            }
         }
 
         private void Send2Device(DQCommand dq)
