@@ -605,82 +605,6 @@ namespace UDPTestClient
                     samplecount[myOrder] = samplecount[myOrder] + myPayloadSamples;
 
                     return 1;
-                case DQTHUMBSTREAM:
-                    myNumOfChan = BitConverter.ToInt32(receiveBytes, 12);
-                    myPayloadSamples = BitConverter.ToInt32(receiveBytes, 16);
-
-                    Int16[,] ADCData = new Int16[myNumOfChan, myPayloadSamples / myNumOfChan];
-
-                    i = x = y = 0;
-                    for (x = 0; x < myPayloadSamples / myNumOfChan ; x++)
-                    {
-                        for (y = 0; y <  myNumOfChan; y++) { 
-                            n = BitConverter.ToInt16(receiveBytes, 20 + i * 2);
-                            i = i + 1;
-                            ADCData[y, x] = (short)(n & m);
-                        }
-
-                    }
-
-                    if (myReAligned==1)
-                    {
-                        //Wait until we have a full screen before we plot it!
-                        FullScreenADCData = new Int16[myNumOfChan, axXChart1.Xmax];
-
-                        bNewWindow = true;
-                        NewXLengh = 0;
-                    }
-
-
-                    if (bNewWindow)
-                    {
-                        x = y = 0;
-                        if ((NewXLengh + myPayloadSamples / myNumOfChan) < axXChart1.Xmax)
-                        {
-                            for (x = 0; x < myPayloadSamples / myNumOfChan; x++)
-                            {
-                                for (y = 0; y < myNumOfChan; y++)
-                                {
-                                    FullScreenADCData[y, NewXLengh + x] = ADCData[y, x];
-                                }
-
-                            }
-                            NewXLengh = NewXLengh + myPayloadSamples / myNumOfChan;
-                        }
-                        else
-                        {
-                            Int16[,] PartialScreenADCData = new Int16[myNumOfChan, NewXLengh];
-
-                            for (x = 0; x < NewXLengh; x++)
-                            {
-                                for (y = 0; y < myNumOfChan; y++)
-                                {
-                                    PartialScreenADCData[y, x] = FullScreenADCData[y, x];
-                                }
-
-                            }
-
-                            axXChart1
-                                .Chart(PartialScreenADCData);
-                            axXChart1
-                                .Chart(ADCData);
-                            bNewWindow = false;
-                        }
-                    }
-                    else
-                    {
-                        axXChart1
-                            .Chart(ADCData);
-                    }
-
-                    samplecount[0] = 0;
-                    samplecount[1] = 0;
-                    samplecount[2] = 0;
-
-                    fillindex[0] = 0;
-                    fillindex[1] = 0;
-                    fillindex[2] = 0;
-                    break;
                 case DQRESPONSE:
                     myPayloadSamples = BitConverter.ToInt32(receiveBytes, 12);
                     byte[] myPayload = new byte[myPayloadSamples];
@@ -698,10 +622,6 @@ namespace UDPTestClient
             return 0;
         }
 
-        private void dqcmd_text_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void my_query_Click(object sender, EventArgs e)
         {
