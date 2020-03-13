@@ -719,14 +719,11 @@ namespace UDPTestClient
             
         }
 
-        private void axDQChart1_ChartChanged(object sender, AxDQCHARTLib._DDQChartEvents_ChartChangedEvent e)
-        {
-
-        }
-
+        
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            string text = listBox1.GetItemText(listBox1.SelectedItem);
+            sync1.Text = text.Substring(PayLoad.Text.LastIndexOf('.')+1, 3).Trim() ;
         }
 
         private void Send2Device(DQCommand dq)

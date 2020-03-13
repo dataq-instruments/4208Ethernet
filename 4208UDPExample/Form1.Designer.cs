@@ -54,9 +54,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmd_dest_ip = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.par1_label = new System.Windows.Forms.Label();
-            this.par2_label = new System.Windows.Forms.Label();
-            this.par3_label = new System.Windows.Forms.Label();
             this.my_keepalive = new System.Windows.Forms.CheckBox();
             this.gap_count = new System.Windows.Forms.Label();
             this.packetsize = new System.Windows.Forms.ComboBox();
@@ -72,6 +69,9 @@
             this.decinput = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.DecaInput = new System.Windows.Forms.TextBox();
+            this.par3_label = new System.Windows.Forms.Label();
+            this.par2_label = new System.Windows.Forms.Label();
+            this.par1_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axXChart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(501, 342);
+            this.listBox1.Size = new System.Drawing.Size(384, 342);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -94,7 +94,7 @@
             // 
             // my_disconnect
             // 
-            this.my_disconnect.Location = new System.Drawing.Point(1289, 8);
+            this.my_disconnect.Location = new System.Drawing.Point(1072, 17);
             this.my_disconnect.Name = "my_disconnect";
             this.my_disconnect.Size = new System.Drawing.Size(93, 48);
             this.my_disconnect.TabIndex = 37;
@@ -109,7 +109,7 @@
             // 
             // sync_start
             // 
-            this.sync_start.Location = new System.Drawing.Point(1136, 8);
+            this.sync_start.Location = new System.Drawing.Point(919, 17);
             this.sync_start.Name = "sync_start";
             this.sync_start.Size = new System.Drawing.Size(65, 48);
             this.sync_start.TabIndex = 41;
@@ -119,7 +119,7 @@
             // 
             // sync_stop
             // 
-            this.sync_stop.Location = new System.Drawing.Point(1207, 7);
+            this.sync_stop.Location = new System.Drawing.Point(990, 16);
             this.sync_stop.Name = "sync_stop";
             this.sync_stop.Size = new System.Drawing.Size(71, 49);
             this.sync_stop.TabIndex = 46;
@@ -148,7 +148,7 @@
             // 
             // my_setup_bothunits
             // 
-            this.my_setup_bothunits.Location = new System.Drawing.Point(992, 8);
+            this.my_setup_bothunits.Location = new System.Drawing.Point(775, 17);
             this.my_setup_bothunits.Name = "my_setup_bothunits";
             this.my_setup_bothunits.Size = new System.Drawing.Size(111, 48);
             this.my_setup_bothunits.TabIndex = 51;
@@ -159,7 +159,7 @@
             // sync1
             // 
             this.sync1.ForeColor = System.Drawing.Color.Crimson;
-            this.sync1.Location = new System.Drawing.Point(647, 13);
+            this.sync1.Location = new System.Drawing.Point(520, 18);
             this.sync1.Name = "sync1";
             this.sync1.Size = new System.Drawing.Size(25, 20);
             this.sync1.TabIndex = 54;
@@ -167,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(678, 17);
+            this.label1.Location = new System.Drawing.Point(551, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 56;
@@ -175,7 +175,7 @@
             // 
             // sync_srate
             // 
-            this.sync_srate.Location = new System.Drawing.Point(728, 12);
+            this.sync_srate.Location = new System.Drawing.Point(601, 17);
             this.sync_srate.Name = "sync_srate";
             this.sync_srate.Size = new System.Drawing.Size(47, 20);
             this.sync_srate.TabIndex = 57;
@@ -296,40 +296,12 @@
             this.label9.TabIndex = 71;
             this.label9.Text = "Cmd";
             // 
-            // par1_label
-            // 
-            this.par1_label.AutoSize = true;
-            this.par1_label.Location = new System.Drawing.Point(150, 393);
-            this.par1_label.Name = "par1_label";
-            this.par1_label.Size = new System.Drawing.Size(28, 13);
-            this.par1_label.TabIndex = 72;
-            this.par1_label.Text = "N.A.";
-            this.par1_label.Click += new System.EventHandler(this.par1_label_Click);
-            // 
-            // par2_label
-            // 
-            this.par2_label.AutoSize = true;
-            this.par2_label.Location = new System.Drawing.Point(150, 416);
-            this.par2_label.Name = "par2_label";
-            this.par2_label.Size = new System.Drawing.Size(28, 13);
-            this.par2_label.TabIndex = 73;
-            this.par2_label.Text = "N.A.";
-            // 
-            // par3_label
-            // 
-            this.par3_label.AutoSize = true;
-            this.par3_label.Location = new System.Drawing.Point(150, 444);
-            this.par3_label.Name = "par3_label";
-            this.par3_label.Size = new System.Drawing.Size(28, 13);
-            this.par3_label.TabIndex = 74;
-            this.par3_label.Text = "N.A.";
-            // 
             // my_keepalive
             // 
             this.my_keepalive.AutoSize = true;
             this.my_keepalive.Checked = true;
             this.my_keepalive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.my_keepalive.Location = new System.Drawing.Point(635, 46);
+            this.my_keepalive.Location = new System.Drawing.Point(508, 51);
             this.my_keepalive.Name = "my_keepalive";
             this.my_keepalive.Size = new System.Drawing.Size(74, 17);
             this.my_keepalive.TabIndex = 76;
@@ -357,7 +329,7 @@
             "256",
             "512",
             "1024"});
-            this.packetsize.Location = new System.Drawing.Point(558, 44);
+            this.packetsize.Location = new System.Drawing.Point(431, 49);
             this.packetsize.Name = "packetsize";
             this.packetsize.Size = new System.Drawing.Size(53, 21);
             this.packetsize.TabIndex = 82;
@@ -366,7 +338,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(531, 48);
+            this.label10.Location = new System.Drawing.Point(404, 53);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 13);
             this.label10.TabIndex = 83;
@@ -397,7 +369,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(781, 17);
+            this.label2.Location = new System.Drawing.Point(654, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 92;
@@ -405,7 +377,7 @@
             // 
             // ActiveChannel
             // 
-            this.ActiveChannel.Location = new System.Drawing.Point(840, 13);
+            this.ActiveChannel.Location = new System.Drawing.Point(713, 18);
             this.ActiveChannel.Name = "ActiveChannel";
             this.ActiveChannel.Size = new System.Drawing.Size(26, 20);
             this.ActiveChannel.TabIndex = 93;
@@ -414,17 +386,17 @@
             // axXChart1
             // 
             this.axXChart1.Enabled = true;
-            this.axXChart1.Location = new System.Drawing.Point(529, 64);
+            this.axXChart1.Location = new System.Drawing.Point(402, 71);
             this.axXChart1.Name = "axXChart1";
             this.axXChart1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axXChart1.OcxState")));
-            this.axXChart1.Size = new System.Drawing.Size(849, 442);
+            this.axXChart1.Size = new System.Drawing.Size(763, 442);
             this.axXChart1.TabIndex = 79;
             this.axXChart1.ChartChanged += new AxXCHARTLib._DXChartEvents_ChartChangedEventHandler(this.axXChart1_ChartChanged);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(555, 17);
+            this.label3.Location = new System.Drawing.Point(406, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 11);
             this.label3.TabIndex = 94;
@@ -434,7 +406,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(715, 46);
+            this.label11.Location = new System.Drawing.Point(588, 51);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 95;
@@ -442,7 +414,7 @@
             // 
             // decinput
             // 
-            this.decinput.Location = new System.Drawing.Point(753, 46);
+            this.decinput.Location = new System.Drawing.Point(626, 51);
             this.decinput.Name = "decinput";
             this.decinput.Size = new System.Drawing.Size(22, 20);
             this.decinput.TabIndex = 96;
@@ -452,7 +424,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(789, 46);
+            this.label12.Location = new System.Drawing.Point(662, 51);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 13);
             this.label12.TabIndex = 97;
@@ -460,17 +432,45 @@
             // 
             // DecaInput
             // 
-            this.DecaInput.Location = new System.Drawing.Point(840, 45);
+            this.DecaInput.Location = new System.Drawing.Point(713, 50);
             this.DecaInput.Name = "DecaInput";
             this.DecaInput.Size = new System.Drawing.Size(31, 20);
             this.DecaInput.TabIndex = 98;
             this.DecaInput.Text = "1";
             // 
+            // par3_label
+            // 
+            this.par3_label.AutoSize = true;
+            this.par3_label.Location = new System.Drawing.Point(150, 444);
+            this.par3_label.Name = "par3_label";
+            this.par3_label.Size = new System.Drawing.Size(28, 13);
+            this.par3_label.TabIndex = 74;
+            this.par3_label.Text = "N.A.";
+            // 
+            // par2_label
+            // 
+            this.par2_label.AutoSize = true;
+            this.par2_label.Location = new System.Drawing.Point(150, 416);
+            this.par2_label.Name = "par2_label";
+            this.par2_label.Size = new System.Drawing.Size(28, 13);
+            this.par2_label.TabIndex = 73;
+            this.par2_label.Text = "N.A.";
+            // 
+            // par1_label
+            // 
+            this.par1_label.AutoSize = true;
+            this.par1_label.Location = new System.Drawing.Point(150, 393);
+            this.par1_label.Name = "par1_label";
+            this.par1_label.Size = new System.Drawing.Size(28, 13);
+            this.par1_label.TabIndex = 72;
+            this.par1_label.Text = "N.A.";
+            this.par1_label.Click += new System.EventHandler(this.par1_label_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 524);
+            this.ClientSize = new System.Drawing.Size(1174, 524);
             this.Controls.Add(this.DecaInput);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.decinput);
@@ -551,9 +551,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox cmd_dest_ip;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label par1_label;
-        private System.Windows.Forms.Label par2_label;
-        private System.Windows.Forms.Label par3_label;
         private System.Windows.Forms.CheckBox my_keepalive;
         private AxXCHARTLib.AxXChart axXChart1;
         private System.Windows.Forms.Label gap_count;
@@ -569,6 +566,9 @@
         private System.Windows.Forms.TextBox decinput;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox DecaInput;
+        private System.Windows.Forms.Label par3_label;
+        private System.Windows.Forms.Label par2_label;
+        private System.Windows.Forms.Label par1_label;
     }
 }
 
