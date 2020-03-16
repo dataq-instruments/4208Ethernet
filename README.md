@@ -10,6 +10,8 @@
  5)Push "Start" to start acquisition then "Stop" to stop acquisition<br/>
  6)Push "Disconnect" to release the device<br/>
  
+ ![alt text](https://www.dataq.com/resources/repository/ethernet.gif "ScreenCapture by LICECap")
+ 
  If you can't start a device, it may be connected to WinDaq running on another PC. Read the protocol of "QUERY" to figure out which one is available 
  
  This example uses Xchart to plot the waveform, which is installed if you install WinDaq addon to your PC. For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
