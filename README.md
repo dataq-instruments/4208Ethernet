@@ -1,4 +1,4 @@
-# 4208Ethernet
+# 4xx8 Ethernet Example
  Ethernet Example suports 4108/4208/4718 ethernet devices
  
  It demonstrate how to use commands to set up and acquire data then display in a chart.
@@ -14,4 +14,4 @@
  
  If you can't start a device, it may be connected to WinDaq running on another PC. Read the protocol of "QUERY" to figure out which one is available 
  
- This example uses Xchart to plot the waveform, which is installed if you install WinDaq addon to your PC. For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
+ This example uses Xchart to plot the waveform, which is installed if you install WinDaq addon (https://www.dataq.com/products/windaq/add_ons/index.htm) to your PC. For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
