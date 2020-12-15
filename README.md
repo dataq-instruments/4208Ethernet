@@ -14,7 +14,8 @@
  3)Click on a device to use it<br/>
  4)Push the button "Connect Setup" to config the device<br/>
  5)Push "Start" to start acquisition then "Stop" to stop acquisition<br/>
- 6)Push "Disconnect" to release the device<br/>
+ 6)You can drag the waveform up and down, and use the mouse wheel to zoom in and out<br/> 
+ 7)Push "Disconnect" to release the device<br/>
  
  ![alt text](https://www.dataq.com/resources/repository/ethernet.gif "ScreenCapture by LICECap")
  
