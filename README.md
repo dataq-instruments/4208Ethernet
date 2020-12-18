@@ -1,5 +1,5 @@
 # 4xx8 Ethernet Example
- Ethernet Example suports 4108/4208/4718 ethernet devices
+ Ethernet Example suports DI-4108/4208/4718/4730 ethernet devices
  
  It demonstrate how to use protocol to set up and acquire data then display in a chart. 
  
