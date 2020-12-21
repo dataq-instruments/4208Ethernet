@@ -27,8 +27,7 @@
   ![alt text](https://www.dataq.com/resources/repository/ethernet.gif "ScreenCapture by LICECap")
   
  8) If you can't start a device, it may be connected to WinDaq running on another PC. 
- 
- 9) A good tool to understand/debug the protocol communication is the network protocol analyzer WireShark https://www.wireshark.org/
+
  
  **Note**:
  
@@ -40,5 +39,7 @@ To deal with it, you will need to locate the offending .resx files in solution d
 
 **Extra**:
 
-For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
+1) For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
+ 
+2) A good tool to understand/debug the protocol communication is the network protocol analyzer WireShark https://www.wireshark.org/
 
