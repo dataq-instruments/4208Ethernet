@@ -26,7 +26,9 @@
  7) Push "Disconnect" to release the device<br/>
   ![alt text](https://www.dataq.com/resources/repository/ethernet.gif "ScreenCapture by LICECap")
   
- 8) If you can't start a device, it may be connected to WinDaq running on another PC. Read the protocol to find out more
+ 8) If you can't start a device, it may be connected to WinDaq running on another PC. 
+ 
+ 9) A good tool to understand/debug the protocol communication is the network communication analysis software WireShark https://www.wireshark.org/
  
  **Note**:
  
