@@ -42,3 +42,5 @@
  
 2) A good tool to understand/debug the protocol communication is the network protocol analyzer WireShark https://www.wireshark.org/
 
+3) If you want to see all packets between PC and 4108(E), check out this capture https://github.com/dataq-instruments/Ethernet_Protocol_Demo/blob/master/capture.pcapng
+
