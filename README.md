@@ -36,6 +36,8 @@
 - To deal with it, you will need to locate the offending .resx files in solution directory, right click on it, open the properties and check the option "unblock". Repeat this for all offending .resx files before reloading the project <br/>
 ![alt text](https://www.dataq.com/resources/repository/resxunblock.png "how to unblock resx files")
 
+- You can find the WireShark packet capture from a sample rate in this folder
+
 **Extra**:
 
 1) For more info regarding the features of XChart, please refer to http://ultimaserial.com/XChart.html
